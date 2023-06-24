@@ -1,5 +1,14 @@
 # Getting Started with Create React App
 
+Testing Project and Course provided by: https://github.com/harblaith7/React-Testing-Library-Net-Ninja/tree/01-Starter-Project
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
