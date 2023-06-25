@@ -11,10 +11,15 @@ const MockFollowersList = () => {
   );
 };
 
+//!This isn't a good practice because 1)it requires API requests which costs money 2)Requests are slow 3)Test are now dependent on something external (We just want to test our react frontend)
+// TODO You should test the API in complete isolation and App in complete isolation
+//TODO Mock the data that API gives us
+//TODO: Mock the axios function
 describe("FollowersList", () => {
   it("should render first follower card", async () => {
     render(<MockFollowersList />);
     const followerDivElement = await screen.findByTestId("follower-item-0"); //getByTestId does not work asynchronously
+    screen.debug();
     expect(followerDivElement).toBeInTheDocument();
   });
 
