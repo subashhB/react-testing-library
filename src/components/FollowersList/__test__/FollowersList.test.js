@@ -16,10 +16,21 @@ const MockFollowersList = () => {
 //TODO Mock the data that API gives us
 //TODO: Mock the axios function
 describe("FollowersList", () => {
+    beforeEach(()=>{
+        console.log("Running before each tests in FollowersList");
+    })
+    beforeAll(()=>{
+        console.log("Running once before all the tests for FollowersList");
+    })
+    afterEach(()=>{
+        console.log("Running after each tests in FollowersList");
+    })
+    afterAll(()=>{
+        console.log("Running once after all the tests for FollowersList");
+    })
   it("should render first follower card", async () => {
     render(<MockFollowersList />);
     const followerDivElement = await screen.findByTestId("follower-item-0"); //getByTestId does not work asynchronously
-    screen.debug();
     expect(followerDivElement).toBeInTheDocument();
   });
 
